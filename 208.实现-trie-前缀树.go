@@ -17,7 +17,7 @@ type Trie struct {
 	root *TrieNode
 }
 
-func Constructor() Trie {
+func Constructor208() Trie {
 	return Trie{
 		root: &TrieNode{},
 	}
