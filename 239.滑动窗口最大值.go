@@ -1,0 +1,49 @@
+package leetcode
+
+/*
+ * @lc app=leetcode.cn id=239 lang=golang
+ *
+ * [239] 滑动窗口最大值
+ */
+
+// @lc code=start
+type MonotonicQueue struct {
+	q []int
+}
+
+func (mq *MonotonicQueue) push(n int) {
+	for len(mq.q) > 0 && mq.q[len(mq.q)-1] < n {
+		mq.q = mq.q[:len(mq.q)-1]
+	}
+	mq.q = append(mq.q, n)
+}
+
+func (mq *MonotonicQueue) max() int {
+	return mq.q[0]
+}
+
+func (mq *MonotonicQueue) pop(n int) {
+	if n == mq.q[0] {
+		mq.q = mq.q[1:]
+	}
+}
+func maxSlidingWindow(nums []int, k int) []int {
+	window := MonotonicQueue{make([]int, 0)}
+	res := make([]int, 0)
+
+	for i := 0; i < len(nums); i++ {
+		if i < k-1 {
+			window.push(nums[i])
+		} else {
+			// 窗口向前滑动，加入新数字
+			window.push(nums[i])
+			// 记录当前窗口的最大值
+			res = append(res, window.max())
+			// 移出旧数字
+			window.pop(nums[i-k+1])
+		}
+	}
+	return res
+}
+
+// @lc code=end
