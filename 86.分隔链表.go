@@ -14,7 +14,7 @@ package leetcode
  *     Next *ListNode
  * }
  */
-func partition(head *ListNode, x int) *ListNode {
+func partition86(head *ListNode, x int) *ListNode {
 	//2个虚拟头节点
 	dummy1 := &ListNode{-1, nil}
 	dummy2 := &ListNode{-1, nil}
