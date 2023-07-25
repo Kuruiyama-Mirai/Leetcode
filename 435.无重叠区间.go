@@ -22,18 +22,11 @@ func eraseOverlapIntervals(intervals [][]int) int {
 		if intervals[i][0] >= intervals[i-1][1] {
 			res++
 		} else {
-			intervals[i][1] = Min435(intervals[i][1], intervals[i-1][1])
+			intervals[i][1] = Min(intervals[i][1], intervals[i-1][1])
 		}
 	}
 
 	return len(intervals) - res
-}
-
-func Min435(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }
 
 // @lc code=end

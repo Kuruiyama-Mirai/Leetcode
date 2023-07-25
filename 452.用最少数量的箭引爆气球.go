@@ -18,17 +18,10 @@ func findMinArrowShots(points [][]int) int {
 		if points[i-1][1] < points[i][0] {
 			res++
 		} else {
-			points[i][1] = Min452(points[i][1], points[i-1][1])
+			points[i][1] = Min(points[i][1], points[i-1][1])
 		}
 	}
 	return res
-}
-
-func Min452(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }
 
 // @lc code=end

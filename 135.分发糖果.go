@@ -26,20 +26,13 @@ func candy(ratings []int) int {
 	//从右到左
 	for i := len(ratings) - 2; i >= 0; i-- {
 		if ratings[i] > ratings[i+1] {
-			need[i] = Max135(need[i], need[i+1]+1)
+			need[i] = Max(need[i], need[i+1]+1)
 		}
 	}
 	for i := range need {
 		sum += need[i]
 	}
 	return sum
-}
-
-func Max135(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
 
 // @lc code=end

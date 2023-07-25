@@ -11,17 +11,9 @@ func maxProfit(prices []int) int {
 	res := 0
 
 	for i := 1; i < len(prices); i++ {
-		res += Max122(prices[i]-prices[i-1], 0)
+		res += Max(prices[i]-prices[i-1], 0)
 	}
 	return res
-}
-
-func Max122(a, b int) int {
-
-	if a > b {
-		return a
-	}
-	return b
 }
 
 // @lc code=end
