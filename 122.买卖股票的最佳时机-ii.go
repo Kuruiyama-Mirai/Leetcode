@@ -7,7 +7,7 @@ package leetcode
  */
 
 // @lc code=start
-func maxProfit(prices []int) int {
+func maxProfit122(prices []int) int {
 	res := 0
 
 	for i := 1; i < len(prices); i++ {
