@@ -30,7 +30,7 @@ func largestValues(root *TreeNode) []int {
 		for i := 0; i < sz; i++ {
 			cur := q[0]
 			q = q[1:]
-			temp = Max515(temp, cur.Val)
+			temp = Max(temp, cur.Val)
 
 			if cur.Left != nil {
 				q = append(q, cur.Left)
@@ -43,12 +43,6 @@ func largestValues(root *TreeNode) []int {
 		temp = math.MinInt64
 	}
 	return res
-}
-func Max515(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
 }
 
 // @lc code=end
