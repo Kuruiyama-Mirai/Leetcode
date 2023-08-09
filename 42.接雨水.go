@@ -27,7 +27,7 @@ func trap(height []int) int {
 				stack = stack[:len(stack)-1]
 
 				if len(stack) != 0 {
-					water := (Min(height[i], height[stack[len(stack)-1]]) - height[top]) * (i - stack[len(stack)-1] - 1)
+					water := (min(height[i], height[stack[len(stack)-1]]) - height[top]) * (i - stack[len(stack)-1] - 1)
 					res += water
 				}
 			}

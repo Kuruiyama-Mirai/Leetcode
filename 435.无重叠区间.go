@@ -22,7 +22,7 @@ func eraseOverlapIntervals(intervals [][]int) int {
 		if intervals[i][0] >= intervals[i-1][1] {
 			res++
 		} else {
-			intervals[i][1] = Min(intervals[i][1], intervals[i-1][1])
+			intervals[i][1] = min(intervals[i][1], intervals[i-1][1])
 		}
 	}
 

@@ -26,21 +26,3 @@ type ChildrenNode struct {
 	Val      int
 	Children []*Node
 }
-
-//取最大值
-func Max(a, b int) int {
-	if a > b {
-		return a
-	} else {
-		return b
-	}
-}
-
-//取最小值
-func Min(a, b int) int {
-	if a > b {
-		return b
-	} else {
-		return a
-	}
-}

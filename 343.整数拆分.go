@@ -13,7 +13,7 @@ func integerBreak(n int) int {
 
 	for i := 3; i <= n; i++ {
 		for j := 1; j < i-1; j++ {
-			dp[i] = Max(dp[i], Max(j*(i-j), j*dp[i-j]))
+			dp[i] = max(dp[i], max(j*(i-j), j*dp[i-j]))
 		}
 	}
 	return dp[n]

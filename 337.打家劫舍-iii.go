@@ -30,12 +30,12 @@ func rob337(root *TreeNode) int {
 		//偷当前节点
 		robCur := cur.Val + left[0] + right[0]
 		//不偷当前，最大值就是左右子树的值
-		notRob := Max(left[0], left[1]) + Max(right[0], right[1])
+		notRob := max(left[0], left[1]) + max(right[0], right[1])
 
 		return []int{notRob, robCur}
 	}
 	res := robTree(root)
-	return Max(res[0], res[1])
+	return max(res[0], res[1])
 }
 
 // @lc code=end

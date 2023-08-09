@@ -16,7 +16,7 @@ func partitionLabels(s string) []int {
 		letter[s[i]-'a'] = i
 	}
 	for i := 0; i < len(s); i++ {
-		right = Max(right, letter[s[i]-'a'])
+		right = max(right, letter[s[i]-'a'])
 		if i == right {
 			res = append(res, right-left+1)
 			left = i + 1

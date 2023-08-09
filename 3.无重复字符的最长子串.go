@@ -21,7 +21,7 @@ func lengthOfLongestSubstring(s string) int {
 			left++
 			window[d]--
 		}
-		res = Max(res, right-left)
+		res = max(res, right-left)
 	}
 	return res
 }

@@ -20,7 +20,7 @@ func merge(intervals [][]int) [][]int {
 			res = append(res, []int{left, right})
 			left, right = intervals[i][0], intervals[i][1]
 		} else {
-			right = Max(right, intervals[i][1])
+			right = max(right, intervals[i][1])
 		}
 	}
 	//要处理最后一个区间

@@ -21,7 +21,7 @@ func findMaxForm(strs []string, m int, n int) int {
 		//m,n就是背包容量 限制死0，1的数量
 		for j := m; j >= zeroNum; j-- {
 			for k := n; k >= oneNum; k-- {
-				dp[j][k] = Max(dp[j][k], dp[j-zeroNum][k-oneNum]+1)
+				dp[j][k] = max(dp[j][k], dp[j-zeroNum][k-oneNum]+1)
 			}
 		}
 	}

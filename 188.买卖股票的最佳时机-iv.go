@@ -22,8 +22,8 @@ func maxProfit188(k int, prices []int) int {
 	for i := 1; i < len(prices); i++ {
 		//j 奇数买入 偶数卖出
 		for j := 0; j < 2*k-1; j += 2 {
-			dp[i][j+1] = Max(dp[i-1][j]-prices[i], dp[i-1][j+1])
-			dp[i][j+2] = Max(dp[i-1][j+1]+prices[i], dp[i-1][j+2])
+			dp[i][j+1] = max(dp[i-1][j]-prices[i], dp[i-1][j+1])
+			dp[i][j+2] = max(dp[i-1][j+1]+prices[i], dp[i-1][j+2])
 		}
 	}
 	return dp[len(prices)-1][2*k]

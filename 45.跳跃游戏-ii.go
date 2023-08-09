@@ -10,7 +10,7 @@ package leetcode
 func jump(nums []int) int {
 	end, far, jump := 0, 0, 0
 	for i := 0; i < len(nums)-1; i++ {
-		far = Max(i+nums[i], far)
+		far = max(i+nums[i], far)
 		if end == i {
 			jump++
 			end = far

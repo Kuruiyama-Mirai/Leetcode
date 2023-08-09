@@ -13,7 +13,7 @@ func canJump(nums []int) bool {
 		return true
 	}
 	for i := 0; i <= cover; i++ {
-		cover = Max(i+nums[i], cover)
+		cover = max(i+nums[i], cover)
 
 		if cover >= len(nums)-1 {
 			return true

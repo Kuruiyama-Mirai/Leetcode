@@ -21,7 +21,7 @@ func numSquares(n int) int {
 
 	for i := 0; i <= n; i++ {
 		for j := i * i; j <= n; j++ {
-			dp[j] = Min(dp[j-i*i]+1, dp[j])
+			dp[j] = min(dp[j-i*i]+1, dp[j])
 		}
 	}
 	return dp[n]

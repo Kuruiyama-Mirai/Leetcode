@@ -26,7 +26,7 @@ func candy(ratings []int) int {
 	//从右到左
 	for i := len(ratings) - 2; i >= 0; i-- {
 		if ratings[i] > ratings[i+1] {
-			need[i] = Max(need[i], need[i+1]+1)
+			need[i] = max(need[i], need[i+1]+1)
 		}
 	}
 	for i := range need {

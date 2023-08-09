@@ -21,7 +21,7 @@ func canPartition(nums []int) bool {
 
 	for i := 0; i < len(nums); i++ {
 		for j := target; j >= nums[i]; j-- {
-			dp[j] = Max(dp[j], dp[j-nums[i]]+nums[i])
+			dp[j] = max(dp[j], dp[j-nums[i]]+nums[i])
 		}
 	}
 	return dp[target] == target

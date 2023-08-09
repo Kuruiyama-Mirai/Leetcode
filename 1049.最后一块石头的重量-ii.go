@@ -17,7 +17,7 @@ func lastStoneWeightII(stones []int) int {
 
 	for i := 0; i < len(stones); i++ {
 		for j := target; j >= stones[i]; j-- {
-			dp[j] = Max(dp[j], dp[j-stones[i]]+stones[i])
+			dp[j] = max(dp[j], dp[j-stones[i]]+stones[i])
 		}
 	}
 	return sum - dp[target] - dp[target]

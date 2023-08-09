@@ -10,7 +10,7 @@ package leetcode
 func shipWithinDays(weights []int, days int) int {
 	left, right := 0, 1
 	for _, w := range weights {
-		left = Max(left, w)
+		left = max(left, w)
 		right += w
 	}
 

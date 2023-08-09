@@ -33,7 +33,7 @@ func getHeight(root *TreeNode) int {
 	if left-right > 1 || right-left > 1 {
 		return -1
 	}
-	return Max(left, right) + 1
+	return max(left, right) + 1
 }
 
 // @lc code=end

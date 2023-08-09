@@ -30,7 +30,7 @@ func largestValues(root *TreeNode) []int {
 		for i := 0; i < sz; i++ {
 			cur := q[0]
 			q = q[1:]
-			temp = Max(temp, cur.Val)
+			temp = max(temp, cur.Val)
 
 			if cur.Left != nil {
 				q = append(q, cur.Left)
