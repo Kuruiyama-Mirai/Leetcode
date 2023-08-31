@@ -41,12 +41,5 @@ func minCut(s string) int {
 	}
 	return dp[len(s)-1]
 }
-func min(i, j int) int {
-	if i < j {
-		return i
-	} else {
-		return j
-	}
-}
 
 // @lc code=end

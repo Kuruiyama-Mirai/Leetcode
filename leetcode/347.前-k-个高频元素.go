@@ -17,7 +17,7 @@ func topKFrequent(nums []int, k int) []int {
 		map_num[num]++
 	}
 
-	for key, _ := range map_num {
+	for key := range map_num {
 		res = append(res, key)
 	}
 
