@@ -7,7 +7,7 @@ package leetcode
  */
 
 // @lc code=start
-func wordBreak(s string, wordDict []string) bool {
+func wordBreak139(s string, wordDict []string) bool {
 	words := make(map[string]bool)
 
 	for _, w := range wordDict {
